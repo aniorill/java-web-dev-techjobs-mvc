@@ -38,6 +38,28 @@
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
+    <table class ="job-listing">
+
+        <th:block th:each ="job : ${jobs}">
+            <tr>
+                <td>
+                    <b>Position: </b>
+                    <b th:text = "${job.getPositionType()}"></b>
+                    <br>
+                    <b>Employer: </b>
+                    <b th:text = "${job.getEmployer()}"></b>
+                    <br>
+                    <b>Location: </b>
+                    <b th:text = "${job.getLocation()}"></b>
+                    <br>
+                    <b>Skills: </b>
+                    <b th:text = "${job.getCoreCompetency()}"></b>
+                    <br>
+                </td>
+            </tr>
+        </th:block>
+    </table>
+
 </div>
 
 </body>
