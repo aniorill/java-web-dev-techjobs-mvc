@@ -43,6 +43,9 @@
         <th:block th:each ="job : ${jobs}">
             <tr>
                 <td>
+                    <b>ID: </b>
+                    <b th:text = "${job.getId()}"></b>
+                    <br>
                     <b>Position: </b>
                     <b th:text = "${job.getPositionType()}"></b>
                     <br>
